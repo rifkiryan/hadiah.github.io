@@ -70,4 +70,11 @@ body
         transform: translate(0,120vh) rotate(360deg);
     }
 }
+@media (min-width: 320px) and (max-width: 767px)
+{
+    body
+    {
+        overflow: hidden;
+    }
+}
 
