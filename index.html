@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD Nindi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="text">Happy Birth Day Nindi</h2>
+    <h2 class="image">&#10084;</h2>
+    
+    <div class="container"></div>
+    <script>
+        let container = document.querySelector('.container');
+        let count = 900;
+        for (let i=0; i < count; i++){
+            let box = document.createElement('div');
+            box.className = 'box';
+            container.appendChild(box)
+        }
+
+        let box = document.querySelectorAll('.box');
+        for(let i = 0; i < box.length; i++){
+            let duration = Math.random() * 3;
+            let changecolor = Math.random() * 360;
+            box[i].addEventListener('mouseover',(e) => {
+                box[i].classList.add('active');
+                box[i].style.animationDuration= 1+duration+'s';
+                box[i].style.filter = 'hue-rotate('+changecolor+'deg)'
+            })
+        }
+    </script>
+</body>
+</html>
